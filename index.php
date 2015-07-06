@@ -182,9 +182,9 @@ foreach ($tools as $tool => $content) {
 		<div class="cd-tab-filter-wrapper">
 			<div class="cd-tab-filter">
 				<ul class="cd-filters">
-					<li class="placeholder"> 
+					<li class="placeholder">
 						<a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
-					</li> 
+					</li>
 					<li class="filter">
 						<a class="selected" href="#0" data-type="all">All</a>
 					</li>
