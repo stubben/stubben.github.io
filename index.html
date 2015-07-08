@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
@@ -8,6 +7,337 @@
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<script src="js/jquery-2.1.1.js"></script>
+	<script src="js/jquery.mixitup.min.js"></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
+	<script>
+	var tools = {
+		"adobe-illustrator":{
+			"category":[
+				"app",
+				"productivity"
+			]
+		},
+		"adobe-photoshop":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"anydo":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"compass":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"css3":{
+			"category":[
+		  	"language"
+			]
+		},
+		"dash":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"dropbox":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"drupal":{
+			"category":[
+		  	"cms"
+			]
+		},
+		"filezilla":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"git":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"github":{
+			"category":[
+		  	"service",
+				"productivity"
+			]
+		},
+		"google-chrome":{
+			"category":[
+		  	"app",
+				"browser"
+			]
+		},
+		"google-drive":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"growl":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"hipchat":{
+			"category":[
+		  	"app",
+				"productivity",
+				"social"
+			]
+		},
+		"html5":{
+			"category":[
+		  	"language"
+			]
+		},
+		"imageoptim":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"iterm":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"javascript":{
+			"category":[
+		  	"language"
+			]
+		},
+		"jira":{
+			"category":[
+		  	"service"
+			]
+		},
+		"jquery":{
+			"category":[
+		  	"language"
+			]
+		},
+		"macosx":{
+			"category":[
+		  	"os"
+			]
+		},
+		"microsoft-office":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"microsoft-internet-explorer":{
+			"category":[
+		  	"browser",
+				"app"
+			]
+		},
+		"minimus":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"mozilla-firefox":{
+			"category":[
+		  	"app",
+				"browser"
+			]
+		},
+		"mysql":{
+			"category":[
+		  	"app",
+				"productivity",
+				"language"
+			]
+		},
+		"open-office":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"parallels-desktop":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"php-storm":{
+			"category":[
+		  	"app",
+				"editor",
+				"productivity"
+			]
+		},
+		"php":{
+			"category":[
+		  	"language"
+			]
+		},
+		"remote-desktop-connection":{
+			"category":[
+		  "app",
+			"productivity"
+		]
+		},
+		"retinacapture":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"safari":{
+			"category":[
+		  	"app",
+				"browser"
+			]
+		},
+		"sass":{
+			"category":[
+		  	"language"
+			]
+		},
+		"sequel-pro":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"skype":{
+			"category":[
+		  	"app",
+				"social"
+			]
+		},
+		"sonos":{
+			"category":[
+		  	"app",
+				"stimulus"
+			]
+		},
+		"sourcetree":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"spotify":{
+			"category":[
+		  	"app",
+				"stimulus"
+			]
+		},
+		"steam":{
+			"category":[
+		  	"app",
+				"stimulus"
+			]
+		},
+		"sublime-text-2":{
+			"category":[
+		  	"app",
+				"editor",
+				"productivity"
+			]
+		},
+		"svgo-gui":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"teamcity":{
+			"category":[
+		  	"service"
+			]
+		},
+		"textmate":{
+			"category":[
+		  	"app",
+				"editor",
+				"productivity"
+			]
+		},
+		"textwrangler":{
+			"category":[
+		  	"app",
+				"editor",
+				"productivity"
+			]
+		},
+		"timemachine":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"twitter":{
+			"category":[
+		  	"app",
+				"social"
+			]
+		},
+		"windows":{
+			"category":[
+		  	"os"
+			]
+		},
+		"wordpress":{
+			"category":[
+		  	"cms"
+			]
+		},
+		"wunderlist":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		},
+		"xcode":{
+			"category":[
+		  	"app",
+				"editor",
+				"productivity"
+			]
+		},
+		"xtrafinder":{
+			"category":[
+		  	"app",
+				"productivity"
+			]
+		}
+	};
+
+	var cats = [];
+	$.each(tools, function (tool, content) {
+	  $.each(content, function (key, arr) {
+			if (key == 'category') {
+				$.each(arr, function (key_cat, category) {
+					 if ($.inArray(category, cats) === -1) cats.push(category);
+				})
+			}
+		})
+	});
+	</script>
 	<title>Tooles of the trade | Martin Stub</title>
 </head>
 <body>
@@ -24,354 +354,73 @@
 					<li class="filter">
 						<a class="selected" href="#0" data-type="all">All</a>
 					</li>
-					<li class="filter" data-filter=".app">
-						<a hef="#0" data-type="app">app</a>
-					</li>
-					<li class="filter" data-filter=".productivity">
-						<a hef="#0" data-type="productivity">productivity</a>
-					</li>
-					<li class="filter" data-filter=".language">
-						<a hef="#0" data-type="language">language</a>
-					</li>
-					<li class="filter" data-filter=".cms">
-						<a hef="#0" data-type="cms">cms</a>
-					</li>
-					<li class="filter" data-filter=".service">
-						<a hef="#0" data-type="service">service</a>
-					</li>
-					<li class="filter" data-filter=".browser">
-						<a hef="#0" data-type="browser">browser</a>
-					</li>
-					<li class="filter" data-filter=".social">
-						<a hef="#0" data-type="social">social</a>
-					</li>
-					<li class="filter" data-filter=".os">
-						<a hef="#0" data-type="os">os</a>
-					</li>
-					<li class="filter" data-filter=".editor">
-						<a hef="#0" data-type="editor">editor</a>
-					</li>
-					<li class="filter" data-filter=".stimulus">
-						<a hef="#0" data-type="stimulus">stimulus</a>
-					</li>
 				</ul> <!-- cd-filters -->
 			</div> <!-- cd-tab-filter -->
 		</div> <!-- cd-tab-filter-wrapper -->
 		<section class="cd-gallery">
-			<ul>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/adobe-illustrator.png" alt="Adobe-illustrator"/>
-					</figure>
-				</li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/adobe-photoshop.png" alt="Adobe-photoshop"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/anydo.png" alt="Anydo"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/compass.png" alt="Compass"/>
-					</figure>
-        </li>
-				<li class="mix language">
-					<figure>
-						<img src="img/icons/css3.png" alt="Css3"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/dash.png" alt="Dash"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/dropbox.png" alt="Dropbox"/>
-					</figure>
-        </li>
-				<li class="mix cms">
-					<figure>
-						<img src="img/icons/drupal.png" alt="Drupal"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/filezilla.png" alt="Filezilla"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/git.png" alt="Git"/>
-					</figure>
-        </li>
-				<li class="mix service productivity">
-					<figure>
-						<img src="img/icons/github.png" alt="Github"/>
-					</figure>
-        </li>
-				<li class="mix app browser">
-					<figure>
-						<img src="img/icons/google-chrome.png" alt="Google-chrome"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/google-drive.png" alt="Google-drive"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/growl.png" alt="Growl"/>
-					</figure>
-        </li>
-				<li class="mix app productivity social">
-					<figure>
-						<img src="img/icons/hipchat.png" alt="Hipchat"/>
-					</figure>
-        </li>
-				<li class="mix language">
-					<figure>
-						<img src="img/icons/html5.png" alt="Html5"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/imageoptim.png" alt="Imageoptim"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/iterm.png" alt="Iterm"/>
-					</figure>
-        </li>
-				<li class="mix language">
-					<figure>
-						<img src="img/icons/javascript.png" alt="Javascript"/>
-					</figure>
-        </li>
-				<li class="mix service">
-					<figure>
-						<img src="img/icons/jira.png" alt="Jira"/>
-					</figure>
-        </li>
-				<li class="mix language">
-					<figure>
-						<img src="img/icons/jquery.png" alt="Jquery"/>
-					</figure>
-        </li>
-				<li class="mix os">
-					<figure>
-						<img src="img/icons/macosx.png" alt="Macosx"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/microsoft-office.png" alt="Microsoft-office"/>
-					</figure>
-        </li>
-				<li class="mix browser app">
-					<figure>
-						<img src="img/icons/microsoft-internet-explorer.png" alt="Microsoft-internet-explorer"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/minimus.png" alt="Minimus"/>
-					</figure>
-        </li>
-				<li class="mix app browser">
-					<figure>
-						<img src="img/icons/mozilla-firefox.png" alt="Mozilla-firefox"/>
-					</figure>
-        </li>
-				<li class="mix app productivity language">
-					<figure>
-						<img src="img/icons/mysql.png" alt="Mysql"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/open-office.png" alt="Open-office"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/parallels-desktop.png" alt="Parallels-desktop"/>
-					</figure>
-        </li>
-				<li class="mix app editor productivity">
-					<figure>
-						<img src="img/icons/php-storm.png" alt="Php-storm"/>
-					</figure>
-        </li>
-				<li class="mix language">
-					<figure>
-						<img src="img/icons/php.png" alt="Php"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/remote-desktop-connection.png" alt="Remote-desktop-connection"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/retinacapture.png" alt="Retinacapture"/>
-					</figure>
-        </li>
-				<li class="mix app browser">
-					<figure>
-						<img src="img/icons/safari.png" alt="Safari"/>
-					</figure>
-        </li>
-				<li class="mix language">
-					<figure>
-						<img src="img/icons/sass.png" alt="Sass"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/sequel-pro.png" alt="Sequel-pro"/>
-					</figure>
-        </li>
-				<li class="mix app social">
-					<figure>
-						<img src="img/icons/skype.png" alt="Skype"/>
-					</figure>
-        </li>
-				<li class="mix app stimulus">
-					<figure>
-						<img src="img/icons/sonos.png" alt="Sonos"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/sourcetree.png" alt="Sourcetree"/>
-					</figure>
-        </li>
-				<li class="mix app stimulus">
-					<figure>
-						<img src="img/icons/spotify.png" alt="Spotify"/>
-					</figure>
-        </li>
-				<li class="mix app stimulus">
-					<figure>
-						<img src="img/icons/steam.png" alt="Steam"/>
-					</figure>
-        </li>
-				<li class="mix app editor productivity">
-					<figure>
-						<img src="img/icons/sublime-text-2.png" alt="Sublime-text-2"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/svgo-gui.png" alt="Svgo-gui"/>
-					</figure>
-        </li>
-				<li class="mix service">
-					<figure>
-						<img src="img/icons/teamcity.png" alt="Teamcity"/>
-					</figure>
-        </li>
-				<li class="mix app editor productivity">
-					<figure>
-						<img src="img/icons/textmate.png" alt="Textmate"/>
-					</figure>
-        </li>
-				<li class="mix app editor productivity">
-					<figure>
-						<img src="img/icons/textwrangler.png" alt="Textwrangler"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/timemachine.png" alt="Timemachine"/>
-					</figure>
-        </li>
-				<li class="mix app social">
-					<figure>
-						<img src="img/icons/twitter.png" alt="Twitter"/>
-					</figure>
-        </li>
-				<li class="mix os">
-					<figure>
-						<img src="img/icons/windows.png" alt="Windows"/>
-					</figure>
-        </li>
-				<li class="mix cms">
-					<figure>
-						<img src="img/icons/wordpress.png" alt="Wordpress"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/wunderlist.png" alt="Wunderlist"/>
-					</figure>
-        </li>
-				<li class="mix app editor productivity">
-					<figure>
-						<img src="img/icons/xcode.png" alt="Xcode"/>
-					</figure>
-        </li>
-				<li class="mix app productivity">
-					<figure>
-						<img src="img/icons/xtrafinder.png" alt="Xtrafinder"/>
-					</figure>
-        </li>
-				<li class="gap"></li><li class="gap"></li><li class="gap"></li><li class="gap"></li><li class="gap"></li><li class="gap"></li><li class="gap"></li><li class="gap"></li>			</ul>
+			<ul class="gallery">
+				<!--
+				<?php
+				foreach ($tools as $tool => $content) {
+					print "<li class=\"mix";
+					foreach ($content as $key => $categories) {
+						foreach ($categories as $key2 => $category) {
+							print " " . $category . " ";
+						}
+					}
+					print "\">\n";
+					print "<figure>";
+						print "<img src=\"img/icons/".$tool.".png\" alt=\"".ucfirst($tool)."\"/>";
+						print "<figcaption>";
+						print "</figcaption>";
+					print "</figure>";
+					print "</li>\n";
+				}
+
+				$number_of_gaps = 7;
+				for ($i = 0; $i <= $number_of_gaps; $i++) {
+					print '<li class="gap"></li>';
+				}
+				?>
+				-->
+			</ul>
+			<script>
+			var li;
+			$.each(tools, function (tool, content) {
+				li = '<li class="mix';
+				$.each(content, function (key, categories) {
+					$.each(categories, function (key2, category) {
+						li += ' ' + category + ' ';
+					});
+				});
+				li += '">' + tool + '</li>';
+				$("ul.gallery").append(li);
+				console.log(li);
+			});
+			</script>
 			<div class="cd-fail-message">No results found</div>
 		</section> <!-- cd-gallery -->
 		<div class="cd-filter">
 			<form>
 				<div class="cd-filter-block">
+					<h4>Search</h4>
+					<div class="cd-filter-content">
+						<input type="search" placeholder="Søg">
+					</div> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<div class="cd-filter-block">
 					<h4>Select mulitiple</h4>
 					<ul class="cd-filter-content cd-filters list">
-						<li>
-							<input class="filter" data-filter=".app" type="checkbox" id="app">
-							<label class="checkbox-label" for="app">App</label>
-						</li>
-						<li>
-							<input class="filter" data-filter=".productivity" type="checkbox" id="productivity">
-							<label class="checkbox-label" for="productivity">Productivity</label>
-						</li>
-						<li>
-							<input class="filter" data-filter=".language" type="checkbox" id="language">
-							<label class="checkbox-label" for="language">Language</label>
-						</li>
-						<li>
-							<input class="filter" data-filter=".cms" type="checkbox" id="cms">
-							<label class="checkbox-label" for="cms">Cms</label>
-						</li>
-						<li>
-							<input class="filter" data-filter=".service" type="checkbox" id="service">
-							<label class="checkbox-label" for="service">Service</label>
-						</li>
-						<li>
-							<input class="filter" data-filter=".browser" type="checkbox" id="browser">
-							<label class="checkbox-label" for="browser">Browser</label>
-						</li>
-						<li>
-							<input class="filter" data-filter=".social" type="checkbox" id="social">
-							<label class="checkbox-label" for="social">Social</label>
-						</li>
-						<li>
-							<input class="filter" data-filter=".os" type="checkbox" id="os">
-							<label class="checkbox-label" for="os">Os</label>
-						</li>
-						<li>
-							<input class="filter" data-filter=".editor" type="checkbox" id="editor">
-							<label class="checkbox-label" for="editor">Editor</label>
-						</li>
-						<li>
-							<input class="filter" data-filter=".stimulus" type="checkbox" id="stimulus">
-							<label class="checkbox-label" for="stimulus">Stimulus</label>
-						</li>
+						<?php
+						foreach ($cats as $cat) {
+							print "<li>";
+							print "<input class=\"filter\" data-filter=\".{$cat}\" type=\"checkbox\" id=\"{$cat}\">\n";
+							$uc_cat = ucfirst($cat);
+							print "<label class=\"checkbox-label\" for=\"{$cat}\">{$uc_cat}</label>";
+							print "</li>\n";
+						}
+						?>
 					</ul> <!-- cd-filter-content -->
 				</div> <!-- cd-filter-block -->
 			</form>
@@ -379,8 +428,10 @@
 		</div> <!-- cd-filter -->
 		<a href="#0" class="cd-filter-trigger">Filters</a>
 	</main> <!-- cd-main-content -->
-	<script src="js/jquery-2.1.1.js"></script>
-	<script src="js/jquery.mixitup.min.js"></script>
-	<script src="js/main.js"></script> <!-- Resource jQuery -->
 </body>
+<script>
+$.each(cats, function (key, cat) {
+	$("ul.cd-filters").append('<li class="filter" data-filter="' + cat + '"><a href="#0" data-type="' + cat + '">' + cat + '</a></li>');
+});
+</script>
 </html>
